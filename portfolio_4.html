@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teaching &amp; Research | Keidra Daniels Navaroli, Ph.D.</title>
+<meta name="description" content="Teaching and research portfolio of Keidra Daniels Navaroli, Ph.D. — curator, art historian, and specialist in museum practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#faf7f1;
+    --paper-dim:#f3efe6;
+    --ink:#221f1b;
+    --ink-soft:#544e45;
+    --indigo:#2e4256;
+    --gold:#a67c3d;
+    --clay:#a9634b;
+    --line:#dcd4c3;
+    --maxw:920px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    font-weight:400;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:500;
+    color:var(--ink);
+    margin:0;
+  }
+
+  a{color:var(--indigo);text-decoration:none;}
+  a:hover{color:var(--gold);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:0.72rem;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin:0 0 0.85rem;
+  }
+
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,247,241,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0.9rem 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+  }
+  .nav-name{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.15rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:var(--ink);
+    white-space:nowrap;
+  }
+  .nav-name span{color:var(--gold);}
+  nav.links{
+    display:flex;
+    gap:1.6rem;
+    flex-wrap:wrap;
+  }
+  nav.links a{
+    font-size:0.82rem;
+    font-weight:500;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  nav.links a:hover{color:var(--gold);}
+  .nav-toggle{display:none;}
+
+  @media (max-width:640px){
+    nav.links{
+      display:none;
+      width:100%;
+      flex-direction:column;
+      gap:0.9rem;
+      padding-top:0.9rem;
+    }
+    nav.links.open{display:flex;}
+    .nav-inner{flex-wrap:wrap;}
+    .nav-toggle{
+      display:inline-flex;
+      background:none;
+      border:1px solid var(--line);
+      border-radius:3px;
+      padding:0.4rem 0.7rem;
+      font-family:'Inter',sans-serif;
+      font-size:0.75rem;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--ink);
+      cursor:pointer;
+    }
+  }
+
+  /* ---------- Stitch divider (signature element) ---------- */
+  .stitch{
+    width:100%;
+    height:14px;
+    margin:0 auto;
+  }
+  .stitch svg{display:block; width:100%; height:100%;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    max-width:1100px;
+    margin:0 auto;
+    padding:4.5rem 1.5rem 3rem;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:3rem;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,5vw,3.6rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .hero .credential{
+    font-style:italic;
+    color:var(--indigo);
+  }
+  .hero .tagline{
+    margin-top:1rem;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1.35rem;
+    color:var(--ink-soft);
+  }
+  .hero p.lede{
+    margin-top:1.6rem;
+    max-width:60ch;
+    color:var(--ink-soft);
+    font-size:1.02rem;
+  }
+  .hero-actions{
+    margin-top:2rem;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block;
+    padding:0.75rem 1.5rem;
+    font-size:0.82rem;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    border-radius:2px;
+    transition:all .18s ease;
+  }
+  .btn-primary{
+    background:var(--indigo);
+    color:var(--paper);
+  }
+  .btn-primary:hover{background:var(--gold); color:var(--ink);}
+  .btn-outline{
+    border:1px solid var(--ink);
+    color:var(--ink);
+  }
+  .btn-outline:hover{border-color:var(--gold); color:var(--gold);}
+
+  /* woven motif graphic */
+  .weave{
+    aspect-ratio:1/1;
+    max-width:280px;
+    margin-left:auto;
+  }
+  .weave svg{width:100%; height:100%;}
+
+  @media (max-width:800px){
+    .hero-grid{grid-template-columns:1fr;}
+    .weave{display:none;}
+  }
+
+  /* ---------- Sections ---------- */
+  section{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:3.6rem 1.5rem;
+  }
+  section.alt{
+    max-width:100%;
+    background:var(--paper-dim);
+  }
+  section.alt > .inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.5rem;
+  }
+  section.alt{padding-left:0; padding-right:0;}
+
+  h2.section-title{
+    font-size:1.9rem;
+    font-weight:500;
+    margin-bottom:0.3rem;
+  }
+  .section-head{margin-bottom:2.2rem;}
+  .section-intro{
+    color:var(--ink-soft);
+    max-width:62ch;
+    margin-top:0.6rem;
+  }
+
+  /* Teaching cards */
+  .teach-item{
+    padding:1.6rem 0;
+    border-top:1px solid var(--line);
+  }
+  .teach-item:first-of-type{border-top:none;}
+  .teach-item .role{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.25rem;
+    font-weight:600;
+  }
+  .teach-item .meta{
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    margin-top:0.15rem;
+  }
+  .teach-item .courses{
+    margin-top:0.6rem;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+  .teach-item .courses strong{color:var(--ink); font-weight:600;}
+
+  /* Research */
+  .research-block p{color:var(--ink-soft);}
+  .talk-list{list-style:none; margin:0; padding:0;}
+  .talk-list li{
+    padding:1.3rem 0;
+    border-top:1px solid var(--line);
+  }
+  .talk-list li:first-child{border-top:none;}
+  .talk-role{
+    font-weight:600;
+    color:var(--indigo);
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+  }
+  .talk-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.2rem;
+    font-weight:600;
+    margin-top:0.25rem;
+  }
+  .talk-venue{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin-top:0.15rem;
+  }
+  .talk-desc{
+    margin-top:0.55rem;
+    font-size:0.92rem;
+    color:var(--ink-soft);
+  }
+
+  /* Publications */
+  .pub-list{list-style:none; margin:0; padding:0;}
+  .pub-list li{
+    display:flex;
+    gap:1rem;
+    padding:1.1rem 0;
+    border-top:1px solid var(--line);
+    font-size:0.95rem;
+  }
+  .pub-list li:first-child{border-top:none;}
+  .pub-year{
+    flex:0 0 3.6rem;
+    color:var(--gold);
+    font-weight:600;
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.05rem;
+  }
+  .pub-body a{font-weight:500;}
+  .pub-venue{color:var(--ink-soft); font-size:0.88rem;}
+
+  /* Honors / affiliations two-col */
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:3rem;
+  }
+  @media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+  ul.plain{list-style:none; margin:0; padding:0;}
+  ul.plain li{
+    padding:0.7rem 0;
+    border-top:1px solid var(--line);
+    font-size:0.93rem;
+    color:var(--ink-soft);
+  }
+  ul.plain li:first-child{border-top:none;}
+  ul.plain li strong{color:var(--ink); font-weight:500;}
+
+  /* Curatorial highlight */
+  .highlight-card{
+    display:grid;
+    grid-template-columns:1fr 1.6fr;
+    gap:2.2rem;
+    align-items:center;
+    padding:2rem;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:4px;
+  }
+  @media (max-width:700px){.highlight-card{grid-template-columns:1fr;}}
+  .highlight-card .swatch{
+    aspect-ratio:4/3;
+    border-radius:3px;
+    background:
+      repeating-linear-gradient(45deg, var(--indigo) 0 10px, #3a5069 10px 20px);
+    opacity:0.9;
+  }
+  .highlight-card h3{font-size:1.4rem; margin-bottom:0.4rem;}
+  .highlight-card .dates{
+    font-size:0.82rem;
+    color:var(--gold);
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-weight:600;
+    margin-bottom:0.6rem;
+  }
+  .highlight-card p{color:var(--ink-soft); font-size:0.94rem;}
+
+  /* Contact / CV footer */
+  .contact-cta{
+    text-align:center;
+    padding:4rem 1.5rem;
+  }
+  .contact-cta h2{font-size:2.1rem;}
+  .contact-cta p{
+    color:var(--ink-soft);
+    max-width:50ch;
+    margin:0.9rem auto 1.8rem;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:2rem 1.5rem;
+    text-align:center;
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+  footer a{color:var(--ink-soft);}
+  footer a:hover{color:var(--gold);}
+
+  /* reveal on scroll, respecting reduced motion */
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.in{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <div class="nav-name">Keidra Daniels Navaroli<span>, Ph.D.</span></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#research">Research</a>
+      <a href="#curatorial">Curatorial</a>
+      <a href="#publications">Publications</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.kdnavaroli.com" target="_blank" rel="noopener">Main Site ↗</a>
+    </nav>
+  </div>
+</header>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section class="hero" id="about">
+  <div class="hero-grid">
+    <div class="reveal in">
+      <p class="eyebrow">Teaching &amp; Research Portfolio</p>
+      <h1>Keidra Daniels<br>Navaroli<span class="credential">, Ph.D.</span></h1>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="Navaroli_Extended_CV_Aug2026.pdf" target="_blank" rel="noopener">Download CV</a>
+        <a class="btn btn-outline" href="#teaching">View Teaching</a>
+        <a class="btn btn-outline" href="#research">View Research</a>
+      </div>
+    </div>
+    <div class="weave" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none">
+        <g stroke="#2e4256" stroke-width="1.4" opacity="0.55">
+          <line x1="20" y1="0" x2="20" y2="200"/><line x1="55" y1="0" x2="55" y2="200"/>
+          <line x1="90" y1="0" x2="90" y2="200"/><line x1="125" y1="0" x2="125" y2="200"/>
+          <line x1="160" y1="0" x2="160" y2="200"/>
+        </g>
+        <g stroke="#a67c3d" stroke-width="1.4" opacity="0.75">
+          <line x1="0" y1="20" x2="200" y2="20"/><line x1="0" y1="55" x2="200" y2="55"/>
+          <line x1="0" y1="90" x2="200" y2="90"/><line x1="0" y1="125" x2="200" y2="125"/>
+          <line x1="0" y1="160" x2="200" y2="160"/>
+        </g>
+        <circle cx="90" cy="90" r="34" fill="#faf7f1" stroke="#221f1b" stroke-width="1.2"/>
+        <text x="90" y="95" font-family="Cormorant Garamond, serif" font-size="15" fill="#221f1b" text-anchor="middle" font-style="italic">T&amp;T</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section id="teaching" class="reveal">
+  <div class="section-head">
+    <p class="eyebrow">Teaching</p>
+    <h2 class="section-title">Courses &amp; Curriculum Development</h2>
+    <p class="section-intro">Recent teaching appointments at the University of Central Florida, spanning American art history, African American art, and digital humanities methods.</p>
+  </div>
+
+  <div class="teach-item">
+    <div class="role">Visiting Instructor, School of Visual Arts and Design</div>
+    <div class="meta">University of Central Florida · 2026 – Present</div>
+    <div class="courses">
+      <strong>Courses:</strong> History of Western Art I (ARH 2050), History of Western Art I Honors (ARH 2050H), American Art (ARH 3610), African American Art (ARH 3631), History of Immersive Experience (ARH 3880), Nineteenth Century Art (ARH 4430), Southern Folk Arts (ARH 3683)<br>
+      <strong>Topics:</strong> art historical methodologies (entry to senior level), American social history, Indigenous studies, African American representation, museum practice, global modernisms, digital art history
+    </div>
+  </div>
+
+  <div class="teach-item">
+    <div class="role">Adjunct Instructor, School of Visual Arts and Design</div>
+    <div class="meta">University of Central Florida · 2023 – 2026</div>
+    <div class="courses">
+      <strong>Courses:</strong> American Art (ARH 3610), African American Art (ARH 3631), Twentieth Century Art (ARH 4450), Nineteenth Century Art (ARH 4430)<br>
+      <strong>Topics:</strong> art historical methodologies, American social history, Indigenous studies, African American representation, museum practice, global modernisms, digital art history
+    </div>
+  </div>
+
+  <div class="teach-item">
+    <div class="role">Guest Lecturer, History of Textiles (PGTX 5085)</div>
+    <div class="meta">Parsons School of Design, The New School · 2022</div>
+    <div class="courses">
+      With Dr. Sandra Sider, Lecturer in Textiles.<br>
+      <strong>Topics:</strong> textile history (pre-1950), contemporary textiles, curatorial practice
+    </div>
+  </div>
+
+  <div class="teach-item">
+    <div class="role">Graduate Teaching Assistant, Nicholson School of Communication and Media</div>
+    <div class="meta">University of Central Florida · 2022</div>
+    <div class="courses">
+      <strong>Course:</strong> Tools for the Digital Humanities (DIG 3171), with Dr. Emily Johnson, Assistant Professor of Games and Interactive Media<br>
+      <strong>Topics:</strong> online publishing platforms, digital curation, inclusive practice in technology
+    </div>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section class="alt reveal" id="research">
+  <div class="inner">
+    <div class="section-head">
+      <p class="eyebrow">Research</p>
+      <h2 class="section-title">Education</h2>
+      <div class="research-block">
+        <p>Keidra earned her Ph.D. in the Texts and Technology program at the University of Central Florida in 2026, specializing in Public History. Her dissertation, <em>"Hidden Gem, Fraught Liability, or Visible Asset? The Museum of Contemporary Art Jacksonville,"</em> passed with distinction and was supervised by Dr. Keri Watson, Dr. Scot French, Dr. Amy Giroux, and Dr. Mora Beauchamp-Byrd. The project uses inclusive, culturally responsive frameworks to evaluate how academic and college museums are perceived and valued within their host institutions, pairing art historical analysis with data-driven methods.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.9rem; margin-bottom:1rem; letter-spacing:0.02em;">Select Talks &amp; Presentations</h3>
+    <ul class="talk-list">
+      <li>
+        <div class="talk-role">Presenter</div>
+        <div class="talk-title">"Swagga Like Us:" Clothing, Culture, and Rhetoric in the Fiber Portraits of Kandy G. Lopez</div>
+        <div class="talk-venue">Painted Garments Symposium, Camberwell College of Arts, University of the Arts London · 2026</div>
+      </li>
+      <li>
+        <div class="talk-role">Presenter</div>
+        <div class="talk-title">Fraught Liabilities, Visible Assets, or Hidden Gems? Evaluating and Visualizing Academic Museums and Galleries in Florida</div>
+        <div class="talk-venue">Data-Driven American Art Histories, Southeastern College Art Conference · 2025, Cincinnati, OH</div>
+        <div class="talk-desc">Dissertation research on how academic museums and galleries are positioned and perceived within their host institutions across Florida.</div>
+      </li>
+      <li>
+        <div class="talk-role">Keynote Panelist</div>
+        <div class="talk-title">Celebrating Ten Years of Panorama: Journal of the Association of Historians of American Art</div>
+        <div class="talk-venue">Eighth Biennial Symposium of the Association of Historians of American Art, Birmingham Museum of Art · 2024</div>
+      </li>
+      <li>
+        <div class="talk-role">Co-Presenter</div>
+        <div class="talk-title">This is America: Re-viewing the Art of the United States</div>
+        <div class="talk-venue">Museums Today Series, George Washington University Museum and The Textile Museum · 2023</div>
+        <div class="talk-desc">A discussion, with co-author Keri Watson, of the development of their inclusive survey of American visual culture and strategies for engaging its themes with public audiences.</div>
+      </li>
+      <li>
+        <div class="talk-role">Panelist</div>
+        <div class="talk-title">REALity of Artificial Intelligence</div>
+        <div class="talk-venue">UCF Center for Ethics, Dr. Phillips Center for the Performing Arts · 2023</div>
+        <div class="talk-desc">A cross-disciplinary conversation on AI, art, and creative ethics, with the Center for Computer Vision and the School of Visual Arts and Design.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section id="curatorial" class="reveal">
+  <div class="section-head">
+    <p class="eyebrow">Curatorial Practice</p>
+    <h2 class="section-title">Selected Exhibitions &amp; Projects</h2>
+  </div>
+  <ul class="talk-list">
+    <li>
+      <div class="talk-role">Curator</div>
+      <div class="talk-title">Histories in Thread: Honoring Heirlooms in Contemporary Quilting</div>
+      <div class="talk-venue">Orange County Regional History Center, Orlando, FL · August 1 – October 5, 2026</div>
+      <div class="talk-desc">Seven nationally and internationally recognized textile artists, curated in partnership with the Quilt of Souls Historical Preservation Project.</div>
+    </li>
+    <li>
+      <div class="talk-role">Guest Co-Curator</div>
+      <div class="talk-title">Intertwined: Labor and Technology in Contemporary Textile Art</div>
+      <div class="talk-venue">Museum of Fine Arts, Florida State University, Tallahassee, FL · August 31 – December 16, 2023</div>
+    </li>
+    <li>
+      <div class="talk-role">Guest Curator</div>
+      <div class="talk-title">Chakaia Booker: Surface Pressure</div>
+      <div class="talk-venue">Sarasota Art Museum, Ringling College of Art and Design, Sarasota, FL · July 16 – October 29, 2023</div>
+      <div class="talk-desc">Featured in <em>Forbes</em>, July 2023.</div>
+    </li>
+    <li>
+      <div class="talk-role">Curator</div>
+      <div class="talk-title">Designed to Mobilize: Propaganda Kimono 1920–1945</div>
+      <div class="talk-venue">Ruth Funk Center for Textile Arts, Florida Institute of Technology, Melbourne, FL · January 26 – May 4, 2019</div>
+      <div class="talk-desc">Silver Award, Southeastern Museums Conference "Excellence in Exhibitions," 2019.</div>
+    </li>
+  </ul>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section class="alt reveal" id="publications">
+  <div class="inner">
+    <div class="section-head">
+      <p class="eyebrow">Publications</p>
+      <h2 class="section-title">Recent Writing</h2>
+    </div>
+    <ul class="pub-list">
+      <li>
+        <div class="pub-year">2026</div>
+        <div class="pub-body">"From Founders to Futures: Forging a Culture of Art at Lehigh"<div class="pub-venue">In <em>Creativity &amp; Connection: Lehigh University Art Galleries at 100</em>, edited by Mark Wonsidler. Munich: Hirmer Publishers, 2026.</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2026</div>
+        <div class="pub-body"><a href="https://doi.org/10.24926/24716839.20989" target="_blank" rel="noopener">Call and Response: DEIA Tensions in Scholarship, Practice, and National Identity</a><div class="pub-venue">Introduction to Colloquium (with Frederica Simmons), Panorama: Journal of the Association of Historians of American Art 12, no. 1 (Spring 2026)</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2023</div>
+        <div class="pub-body"><a href="https://global.oup.com/academic/product/this-is-america-9780190084882?cc=us&amp;lang=en" target="_blank" rel="noopener">This is America: Re-viewing the Art of the United States</a><div class="pub-venue">Oxford University Press · Coauthored with Keri Watson. Winner, 2024 Textbook &amp; Academic Authors Association "Most Promising New Textbook" award.</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2025</div>
+        <div class="pub-body"><a href="http://caareviews.org/reviews/4331" target="_blank" rel="noopener">Review of Is Now the Time for Joyous Rage? A Series of Open Questions</a><div class="pub-venue">caa.reviews, College Art Association · May 2025</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2025</div>
+        <div class="pub-body"><a href="https://scholarworks.iu.edu/journals/index.php/cl/article/view/41599" target="_blank" rel="noopener">Out of the Closet: A Bogeyman for the Internet Age</a><div class="pub-venue">Contemporary Legend 4, no. 3 (2025): 56–77</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2024</div>
+        <div class="pub-body"><a href="https://journalpanorama.org/article/a-look-back/" target="_blank" rel="noopener">A Look Back: Thirty Years of AmArt-L</a><div class="pub-venue">Panorama: Journal of the Association of Historians of American Art 10, no. 2 (Fall 2024)</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2024</div>
+        <div class="pub-body"><a href="https://www.selvedge.org/products/issue-120-magic-carpet" target="_blank" rel="noopener">Control+Shift: The Digital Carpets of Shaheer Zazai</a><div class="pub-venue">Selvedge Magazine 120 (September 2024): 20–23</div></div>
+      </li>
+      <li>
+        <div class="pub-year">2023</div>
+        <div class="pub-body"><a href="https://journalpanorama.org/article/in-conversation-will-wilson/" target="_blank" rel="noopener">Review of In Conversation: Will Wilson</a><div class="pub-venue">Panorama: Journal of the Association of Historians of American Art 9, no. 1 (Spring 2023)</div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section id="recognition" class="reveal">
+  <div class="section-head">
+    <p class="eyebrow">Recognition</p>
+    <h2 class="section-title">Honors &amp; Affiliations</h2>
+  </div>
+  <div class="two-col">
+    <div>
+      <h3 style="font-size:1.1rem; margin-bottom:0.8rem;">Honors &amp; Awards</h3>
+      <ul class="plain">
+        <li><strong>McKnight Doctoral Fellowship</strong> — Florida Education Fund, 2021 – 2026</li>
+        <li><strong>Texts and Technology Conference Travel Award</strong> — University of Central Florida, 2023, 2025, 2026</li>
+        <li><strong>College of Graduate Studies Presentation Fellowship</strong> — University of Central Florida, 2023, 2024, 2025</li>
+        <li><strong>Inductee, Order of Pegasus</strong> — Office of the President, University of Central Florida, 2024</li>
+        <li><strong>"Most Promising New Textbook" Award</strong> — Textbook &amp; Academic Authors Association, for This is America, 2024</li>
+        <li><strong>Equity, Diversity, and Inclusion Award</strong> — Southeastern College Art Conference, 2023</li>
+        <li><strong>Silver Award</strong> — SEMC "Excellence in Exhibitions," for Designed to Mobilize: Propaganda Kimono 1920–1945, 2019</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="font-size:1.9rem; margin-bottom:0.8rem;">Leadership &amp; Affiliations</h3>
+      <ul class="plain">
+        <li><strong>Mennello Museum of American Art</strong> — Trustee (Mayoral Appointment), City of Orlando, 2024 – Present</li>
+        <li><strong>Association of Academic Museums and Galleries</strong> — Board Member; Conference Planning &amp; Programs Committees</li>
+        <li><strong>Surface Design Association</strong> — Board of Directors</li>
+        <li><strong>Textile Society of America</strong> — IDEA Committee</li>
+        <li><strong>Panorama: Journal of AHAA</strong> — Editorial Board; DEI/Digital Art History Manager</li>
+        <li><strong>American Alliance of Museums</strong> — Member</li>
+        <li><strong>Association of Art Museum Curators</strong> — Member</li>
+        <li><strong>Digital Art History Society</strong> — Member</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="stitch" aria-hidden="true"><svg preserveAspectRatio="none" viewBox="0 0 400 14"><line x1="0" y1="7" x2="400" y2="7" stroke="#dcd4c3" stroke-width="1.4" stroke-dasharray="7 7"/></svg></div>
+
+<section class="contact-cta reveal" id="contact">
+  <p class="eyebrow" style="justify-content:center; display:flex;">Get in Touch</p>
+  <h2>Read the full CV, or reach out directly</h2>
+  <p>The complete curriculum vita includes a full record of publications, presentations, courses, and curatorial projects.</p>
+  <div class="hero-actions" style="justify-content:center;">
+    <a class="btn btn-primary" href="Navaroli_Extended_CV_Aug2026.pdf" target="_blank" rel="noopener">Download Full CV</a>
+    <a class="btn btn-outline" href="https://www.kdnavaroli.com" target="_blank" rel="noopener">Visit Main Site</a>
+  </div>
+</section>
+
+<footer>
+  <p>Keidra Daniels Navaroli, Ph.D. &nbsp;·&nbsp; <a href="https://www.kdnavaroli.com" target="_blank" rel="noopener">kdnavaroli.com</a></p>
+</footer>
+
+<script>
+  // mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle) {
+    toggle.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  // scroll reveal
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+  }
+</script>
+
+</body>
+</html>
